@@ -1,3 +1,4 @@
+#https://www.min.io/download/aistor-client
 sudo wget https://dl.min.io/aistor/mc/release/linux-arm64/mc
 sudo mv mc /usr/local/bin/mc
 mc --version
