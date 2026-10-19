@@ -276,6 +276,18 @@ If you encounter permission errors with data directories:
 chmod -R 755 data/
 ```
 
+If Trino fails with:
+```text
+ERROR: [Errno 13] Permission denied: '/data/trino/var'
+```
+fix ownership and restart Trino:
+```bash
+sudo chown -R 1000:1000 data/trino
+docker compose up -d trino
+```
+
+This repository now includes a `trino-permissions` init service that sets `data/trino` ownership before Trino starts.
+
 ### Reset everything
 
 To start fresh:

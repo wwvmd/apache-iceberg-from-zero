@@ -1,0 +1,8 @@
+sudo wget https://dl.min.io/aistor/mc/release/linux-arm64/mc
+sudo mv mc /usr/local/bin/mc
+mc --version
+sudo chmod +x /usr/local/bin/mc
+mc --version
+mc alias set pol http://127.0.0.1:9000 admin password
+mc mb pol/warehouse || true;
+mc ls pol;
